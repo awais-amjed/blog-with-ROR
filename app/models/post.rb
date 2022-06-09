@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
   belongs_to :user
 
-  def increment_posts_counter
+  def increment_counter
     current_user = User.find(user_id)
     current_user.update(posts_counter: (current_user.posts_counter || 0) + 1)
   end
