@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-    @recent_posts = @user.recent_posts
+    @all_posts = Post.where(user_id: params[:user_id]).order(created_at: :desc)
   end
 
   def show
@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   end
 
   def get_all_comments(post_id)
-    Comment.where(post_id:)
+    Comment.where(post_id:).order(created_at: :desc)
   end
 
   helper_method :get_user_name, :get_all_comments
