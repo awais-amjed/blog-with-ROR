@@ -30,3 +30,11 @@ a {
   text-decoration: none;
   color: black;
 }
+
+.alert {
+  border: 3px solid black;
+  margin: 20px 10%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
