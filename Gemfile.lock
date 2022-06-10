@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rspec/rspec-core.git
-  revision: bc9bb2da423b2cf6b7e53f1307c3ef2d24fceb7b
+  revision: 814c1c1ecf79d2191718b2795b6d12d9d522f60b
   branch: main
   specs:
     rspec-core (3.12.0.pre)
@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/rspec/rspec-expectations.git
-  revision: 61fe1bc203fa7b906d3034401fa90f1115cb48ae
+  revision: 1bc30dc41665ade783340d71e1d8f30bf3c9b995
   branch: main
   specs:
     rspec-expectations (3.12.0.pre)
@@ -17,7 +17,7 @@ GIT
 
 GIT
   remote: https://github.com/rspec/rspec-mocks.git
-  revision: 09479287e5ae9378840233c5083437efd3384f4a
+  revision: a2fc2f6bcfffbc7821b7974527d065c8f88560ff
   branch: main
   specs:
     rspec-mocks (3.12.0.pre)
@@ -26,7 +26,7 @@ GIT
 
 GIT
   remote: https://github.com/rspec/rspec-rails.git
-  revision: f8084ddaf669283a558a94f7edee2a785ece50b1
+  revision: c187d036bf4a49054c8485bc6a55f03d2af99581
   branch: main
   specs:
     rspec-rails (6.0.0.pre)
@@ -40,7 +40,7 @@ GIT
 
 GIT
   remote: https://github.com/rspec/rspec-support.git
-  revision: 5fdadceffbd87962ce3f5152c28e968152d89d30
+  revision: 594aa52c39bf8b5b75a1c9a40315b72cd88adc2b
   branch: main
   specs:
     rspec-support (3.12.0.pre)
@@ -214,7 +214,7 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.4.2)
+    rails-html-sanitizer (1.4.3)
       loofah (~> 2.3)
     railties (7.0.3)
       actionpack (= 7.0.3)
@@ -229,20 +229,28 @@ GEM
     reline (0.3.1)
       io-console (~> 0.5)
     rexml (3.2.5)
-    rubocop (1.29.1)
+    rubocop (1.30.1)
       parallel (~> 1.10)
       parser (>= 3.1.0.0)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
       rexml (>= 3.2.5, < 4.0)
-      rubocop-ast (>= 1.17.0, < 2.0)
+      rubocop-ast (>= 1.18.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.18.0)
       parser (>= 3.1.1.0)
     ruby-progressbar (1.11.0)
     rubyzip (2.3.2)
-    selenium-webdriver (4.2.0)
+    sassc (2.4.0)
+      ffi (~> 1.9)
+    sassc-rails (2.1.2)
+      railties (>= 4.0.0)
+      sassc (>= 2.0)
+      sprockets (> 3.0)
+      sprockets-rails
+      tilt
+    selenium-webdriver (4.2.1)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
@@ -258,6 +266,7 @@ GEM
       railties (>= 6.0.0)
     strscan (3.0.3)
     thor (1.2.1)
+    tilt (2.0.10)
     timeout (0.3.0)
     turbo-rails (1.1.1)
       actionpack (>= 6.0.0)
@@ -306,6 +315,7 @@ DEPENDENCIES
   rspec-rails!
   rspec-support!
   rubocop (>= 1.0, < 2.0)
+  sassc-rails
   selenium-webdriver
   sprockets-rails
   stimulus-rails
