@@ -1,1 +1,13 @@
-<h1>You are in users/index</h1>
+<% stylesheet_link_tag 'users/index' %>
+
+<div id="users-list-page" class="content">
+  <ul>
+    <% @users.each do |user| %>
+      <li>
+        <%= link_to user do %>
+          <%= render 'users/user_tile', user: user %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
