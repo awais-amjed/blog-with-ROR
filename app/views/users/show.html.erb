@@ -2,4 +2,8 @@
 
 <div id="user-details-page" class="content">
   <%= render 'users/user_tile', user: @user %>
+  <div id="bio">
+    <p>Bio</p>
+    <p><%= @user.bio %></p>
+  </div>
 </div>
