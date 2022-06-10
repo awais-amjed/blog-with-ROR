@@ -6,6 +6,6 @@
   </div>
   <div class="user-details">
     <h1><%= user.name %></h1>
-    <p>Number of Posts: <%= user.posts_counter %></p>
+    <p>Number of Posts: <%= user.posts_counter || 0 %></p>
   </div>
 </div>

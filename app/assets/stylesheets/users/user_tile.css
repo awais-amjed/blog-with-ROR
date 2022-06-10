@@ -1,6 +1,6 @@
 .user-tile {
   display: flex;
-  padding: 15px 0;
+  margin: 20px 0;
   gap: 20px;
   height: 120px;
 }
