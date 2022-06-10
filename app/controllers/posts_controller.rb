@@ -1,9 +1,16 @@
 class PostsController < ApplicationController
   def index
-    puts params
+    @user = User.find(params[:user_id])
+    @recent_posts = @user.recent_posts(count: 10)
   end
 
   def show
     puts params
   end
+
+  def get_user_name(user_id)
+    User.find(user_id).name
+  end
+
+  helper_method :get_user_name
 end
