@@ -1,0 +1,18 @@
+.post-tile {
+  border: 3px solid black;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-tile h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.post-tile .comments-likes {
+  margin-top: 5px;
+  display: flex;
+  gap: 20px;
+  align-self: end;
+}

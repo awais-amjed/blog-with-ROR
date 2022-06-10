@@ -12,3 +12,28 @@
   gap: 15px;
   border: 3px solid black;
 }
+
+#user-details-page #bio-tag {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+#user-details-page ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#user-details-page #all-posts-button {
+  display: flex;
+  justify-content: center;
+}
+
+#user-details-page #see-all-posts {
+  border: 3px solid black;
+  height: 40px;
+  width: 120px;
+  margin: 0 auto;
+  cursor: pointer;
+}

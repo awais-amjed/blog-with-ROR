@@ -3,7 +3,21 @@
 <div id="user-details-page" class="content">
   <%= render 'users/user_tile', user: @user %>
   <div id="bio">
-    <p>Bio</p>
+    <p id="bio-tag">Bio</p>
     <p><%= @user.bio %></p>
+  </div>
+  <ul>
+    <% @recent_posts.each do |post| %>
+      <li>
+        <%= link_to user_post_path(@user, post) do %>
+          <%= render 'posts/post_tile', post: post %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+  <div id="all-posts-button">
+    <%= link_to user_posts_path(@user) do %>
+      <button id="see-all-posts">See all posts</button>
+    <% end %>
   </div>
 </div>
