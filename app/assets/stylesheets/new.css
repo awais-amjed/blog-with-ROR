@@ -1,4 +1,4 @@
-#new-post-page {
+#add-new-page {
   padding: 40px 0;
   display: flex;
   flex-direction: column;
@@ -6,19 +6,19 @@
   gap: 70px;
 }
 
-#new-post-page form {
+#add-new-page form {
   min-width: 400px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-#new-post-page input {
+#add-new-page input {
   border: 3px solid black;
   padding: 15px 10px;
 }
 
-#new-post-page textarea {
+#add-new-page textarea {
   border: 3px solid black;
   padding: 15px 10px;
 }
