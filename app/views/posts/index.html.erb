@@ -7,8 +7,8 @@
       <li>
         <%= link_to user_post_path(@user, post) do %>
           <%= render 'posts/post_tile', post: post, expanded: false %>
-          <%= render 'posts/comments_tile', comments: post.recent_comments %>
         <% end %>
+        <%= render 'posts/comments_tile', comments: post.recent_comments %>
       </li>
     <% end %>
   </ul>
