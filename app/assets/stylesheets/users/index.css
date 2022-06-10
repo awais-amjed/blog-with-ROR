@@ -5,3 +5,7 @@
 #users-list-page ul {
   list-style: none;
 }
+
+#users-list-page li {
+  margin: 20px 0;
+}

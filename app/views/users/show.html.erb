@@ -1,1 +1,5 @@
-<h1>You are in users/show</h1>
+<% stylesheet_link_tag 'users/show' %>
+
+<div id="user-details-page" class="content">
+  <%= render 'users/user_tile', user: @user %>
+</div>
