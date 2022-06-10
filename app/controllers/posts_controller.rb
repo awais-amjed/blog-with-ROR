@@ -5,12 +5,17 @@ class PostsController < ApplicationController
   end
 
   def show
-    puts params
+    @user = User.find(params[:user_id])
+    @post = Post.find(params[:id])
   end
 
   def get_user_name(user_id)
     User.find(user_id).name
   end
 
-  helper_method :get_user_name
+  def get_all_comments(post_id)
+    Comment.where(post_id:)
+  end
+
+  helper_method :get_user_name, :get_all_comments
 end
