@@ -29,11 +29,3 @@
   display: flex;
   justify-content: center;
 }
-
-#user-details-page #see-all-posts {
-  border: 3px solid black;
-  height: 40px;
-  width: 120px;
-  margin: 0 auto;
-  cursor: pointer;
-}
