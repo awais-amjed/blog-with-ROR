@@ -1,11 +1,10 @@
 #users-list-page {
-  padding: 15px 0;
+  padding: 40px 0;
 }
 
 #users-list-page ul {
   list-style: none;
-}
-
-#users-list-page li {
-  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
