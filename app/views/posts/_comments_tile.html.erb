@@ -4,7 +4,7 @@
   <ul>
     <% comments.each do |comment| %>
       <li>
-        <p class="commenter"><%= get_user_name(comment.user_id) %>:</p>
+        <p class="commenter"><%= comment.user.name %>:</p>
         <p><%= comment.text %></p>
       </li>
     <% end %>
