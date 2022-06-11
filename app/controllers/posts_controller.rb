@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-    @all_posts = Post.where(user_id: params[:user_id]).order(created_at: :desc)
+    @all_posts = @user.posts.order(created_at: :desc)
   end
 
   def show
