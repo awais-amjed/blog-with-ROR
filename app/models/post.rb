@@ -8,8 +8,7 @@ class Post < ApplicationRecord
   validates :likes_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   def increment_counter
-    current_user = User.find(user_id)
-    current_user.update(posts_counter: (current_user.posts_counter || 0) + 1)
+    user.update(posts_counter: (user.posts_counter || 0) + 1)
   end
 
   def recent_comments(count: 5)
