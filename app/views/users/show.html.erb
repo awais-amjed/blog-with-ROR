@@ -2,9 +2,14 @@
 
 <div id="user-details-page" class="content">
   <%= render 'users/user_tile', user: @user %>
-  <div id="bio">
-    <p id="bio-tag">Bio</p>
-    <p><%= @user.bio %></p>
+  <div class="bio-area">
+    <div id="bio">
+      <p id="bio-tag">Bio</p>
+      <p><%= @user.bio %></p>
+    </div>
+    <%= link_to new_user_post_path(@user) do %>
+      <button>Create a new Post</button>
+    <% end %>
   </div>
   <ul>
     <% @all_posts.each do |post| %>
