@@ -12,6 +12,6 @@ class Post < ApplicationRecord
   end
 
   def recent_comments(count: 5)
-    Comment.where(post_id: id).order(created_at: :desc)[0, count]
+    comments.order(created_at: :desc)[0, count]
   end
 end
