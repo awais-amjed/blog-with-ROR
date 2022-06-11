@@ -30,3 +30,19 @@ a {
   text-decoration: none;
   color: black;
 }
+
+.alert {
+  border: 3px solid black;
+  margin: 20px 10%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.custom-button {
+  border: 3px solid black;
+  height: 40px;
+  width: 120px;
+  margin: 0 auto;
+  cursor: pointer;
+}

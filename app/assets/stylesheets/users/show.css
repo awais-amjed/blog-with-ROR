@@ -5,7 +5,20 @@
   gap: 30px;
 }
 
+#user-details-page .bio-area {
+  display: flex;
+  gap: 20px;
+}
+
+#user-details-page .bio-area button {
+  border: 3px solid black;
+  padding: 15px;
+  cursor: pointer;
+  height: 100%;
+}
+
 #user-details-page #bio {
+  width: 100%;
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -28,12 +41,4 @@
 #user-details-page #all-posts-button {
   display: flex;
   justify-content: center;
-}
-
-#user-details-page #see-all-posts {
-  border: 3px solid black;
-  height: 40px;
-  width: 120px;
-  margin: 0 auto;
-  cursor: pointer;
 }

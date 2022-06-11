@@ -2,12 +2,15 @@
 
 <div id="all-posts-page" class="content">
   <%= render 'users/user_tile', user: @user %>
+  <div class="button-container">
+    <%= link_to new_user_post_path(@user) do %>
+      <button>Create a new Post</button>
+    <% end %>
+  </div>
   <ul>
     <% @all_posts.each do |post| %>
       <li>
-        <%= link_to user_post_path(@user, post) do %>
-          <%= render 'posts/post_tile', post: post, expanded: false %>
-        <% end %>
+        <%= render 'posts/post_tile', post: post, user: @user, expanded: false %>
         <%= render 'posts/comments_tile', comments: post.recent_comments %>
       </li>
     <% end %>

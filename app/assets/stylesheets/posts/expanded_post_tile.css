@@ -20,3 +20,9 @@
 .expanded-post-tile .post-data h2 {
   font-size: 1.2rem;
 }
+
+.expanded-post-tile .like-n-comment {
+  display: flex;
+  align-self: flex-end;
+  gap: 5px;
+}
