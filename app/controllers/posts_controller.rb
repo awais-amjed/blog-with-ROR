@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-    @all_posts = Post.where(user_id: params[:user_id]).order(created_at: :desc)
+    @all_posts = @user.posts.includes(:comments).order(created_at: :desc)
   end
 
   def show
@@ -20,7 +20,9 @@ class PostsController < ApplicationController
   def create
     @user = current_user
     post = Post.new(params.require(:post).permit(:text, :title))
-    puts post.user_id = @user.id
+    post.user_id = @user.id
+    post.comments_counter = 0
+    post.likes_counter = 0
     respond_to do |format|
       format.html do
         if post.save
@@ -34,14 +36,4 @@ class PostsController < ApplicationController
       end
     end
   end
-
-  def get_user_name(user_id)
-    User.find(user_id).name
-  end
-
-  def get_all_comments(post_id)
-    Comment.where(post_id:).order(created_at: :desc)
-  end
-
-  helper_method :get_user_name, :get_all_comments
 end
