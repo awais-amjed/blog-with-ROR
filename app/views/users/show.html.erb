@@ -1,26 +1,31 @@
 <% stylesheet_link_tag 'users/show' %>
 
-<div id="user-details-page" class="content">
-  <%= render 'users/user_tile', user: @user %>
-  <div class="bio-area">
-    <div id="bio">
-      <p id="bio-tag">Bio</p>
-      <p><%= @user.bio %></p>
-    </div>
-    <%= link_to new_user_post_path(@user) do %>
-      <button>Create a new Post</button>
-    <% end %>
+  <div id="user-details-page" class="content">
+    <%= render 'users/user_tile' , user: @user %>
+      <div class="bio-area">
+        <div id="bio">
+          <p id="bio-tag">Bio</p>
+          <p>
+            <%= @user.bio %>
+          </p>
+        </div>
+        <%= link_to new_user_post_path(@user) do %>
+          <button>Create a new Post</button>
+          <% end %>
+      </div>
+      <ul>
+        <% @all_posts.each do |post| %>
+          <li>
+            <%= render 'posts/post_tile' , post: post, user:@user, expanded: false %>
+          </li>
+          <% end %>
+      </ul>
+      <div id="all-posts-button">
+        <%= link_to user_posts_path(@user) do %>
+          <button class="custom-button">See all posts</button>
+          <% end %>
+      </div>
+
+      <%=form_with model: User.new, url: destroy_user_session_path, method: :delete do %> <button class="custom-button">Sign out</button>
+        <% end %>
   </div>
-  <ul>
-    <% @all_posts.each do |post| %>
-      <li>
-        <%= render 'posts/post_tile', post: post, user:@user, expanded: false %>
-      </li>
-    <% end %>
-  </ul>
-  <div id="all-posts-button">
-    <%= link_to user_posts_path(@user) do %>
-      <button class="custom-button">See all posts</button>
-    <% end %>
-  </div>
-</div>
