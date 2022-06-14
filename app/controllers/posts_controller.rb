@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @user = User.find(params[:user_id])
     @all_posts = @user.posts.includes(:comments).order(created_at: :desc)
@@ -19,7 +21,7 @@ class PostsController < ApplicationController
 
   def create
     @user = current_user
-    post = Post.new(params.require(:post).permit(:text, :title))
+    post = Post.new(post_params)
     post.user_id = @user.id
     post.comments_counter = 0
     post.likes_counter = 0
@@ -35,5 +37,9 @@ class PostsController < ApplicationController
         end
       end
     end
+  end
+
+  def post_params
+    params.require(:post).permit(:title, :text)
   end
 end
