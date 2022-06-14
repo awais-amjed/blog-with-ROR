@@ -27,6 +27,8 @@ To get a local copy up and running follow these simple example steps.
 - Clone the Repository
 - Go to the project directory
 - Run ```bundle install```
+- Run ```rails db:create```
+- Run ```rails db:migrate```
 
 ### Usage
 
