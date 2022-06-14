@@ -11,6 +11,12 @@
 
 .comments-tile li {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comments-tile li > div {
+  display: flex;
   gap: 10px;
 }
 
