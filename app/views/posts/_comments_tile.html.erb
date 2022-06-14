@@ -4,8 +4,16 @@
   <ul>
     <% comments.each do |comment| %>
       <li>
-        <p class="commenter"><%= comment.user.name %>:</p>
-        <p><%= comment.text %></p>
+          <div>
+            <p class="commenter"><%= comment.user.name %>:</p>
+            <p><%= comment.text %></p>
+          </div>
+          <% if can? :destroy, comment %>
+            <%= form_with url: user_post_comment_path(@user, @post, comment), method: :delete do %>
+              <button class="custom-button">Delete</button>
+            <% end %>
+          <% end %>
+
       </li>
     <% end %>
   </ul>

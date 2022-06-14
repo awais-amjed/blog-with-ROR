@@ -21,7 +21,7 @@
   font-size: 1.2rem;
 }
 
-.expanded-post-tile .like-n-comment {
+.expanded-post-tile .actions {
   display: flex;
   align-self: flex-end;
   gap: 5px;
