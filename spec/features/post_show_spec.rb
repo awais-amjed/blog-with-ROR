@@ -23,8 +23,12 @@ describe 'Post Show' do
     expect(page).to have_content @post.text
   end
 
-  it 'shows the all comments on the post' do
+  it 'shows all comments on the post' do
     @comments.each { |comment| expect(page).to have_content comment.text }
+  end
+
+  it 'shows username of the commenter' do
+    @comments.each { |comment| expect(page).to have_content comment.user.name }
   end
 
   it 'shows how many comments the post has' do
