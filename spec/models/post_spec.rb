@@ -42,7 +42,7 @@ RSpec.describe Post, type: :model do
 
     it 'should increment the posts_counter of the user of Post' do
       previous_counter = user.posts_counter || 0
-      post.increment_counter
+      post.update_counter
       expect(user.posts_counter).to eql(previous_counter + 1)
     end
   end

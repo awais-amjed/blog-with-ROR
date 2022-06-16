@@ -20,7 +20,6 @@ class CommentsController < ApplicationController
     respond_to do |format|
       format.html do
         if comment.save
-          comment.increment_counter
           flash[:success] = 'Comment saved successfully'
           redirect_to user_post_path(@user, @post)
         else

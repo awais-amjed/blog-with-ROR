@@ -2,7 +2,7 @@
 
 <%= link_to user_post_path(user, post) do %>
   <div class="post-tile">
-    <h2>Post #<%= post.id %></h2>
+    <h2><%= post.title %></h2>
     <p class="post-text"><%= post.text %></p>
     <div class="comments-likes">
       <p>Comments <%= post.comments_counter || 0 %></p>

@@ -34,6 +34,12 @@ To get a local copy up and running follow these simple example steps.
 
 - Run ```rails s``` to run the app
 
+### Testing
+
+- ```bundle exec rspec spec/features``` to run feature tests
+- ```bundle exec rspec spec/models``` to run model tests
+- ```bundle exec rspec spec/requests``` to run request tests
+
 ## Authors
 
 👤 **Awais Amjed**
