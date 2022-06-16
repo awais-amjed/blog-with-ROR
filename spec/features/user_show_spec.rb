@@ -6,7 +6,6 @@ def create_and_activate_user(name)
   )
   user.confirm
   user.save
-  create_posts_for_user(user, count: 4)
   user
 end
 
@@ -26,6 +25,7 @@ describe 'User Show', type: :feature do
   before do
     @name = 'user'
     @user = create_and_activate_user(@name)
+    create_posts_for_user(@user, count: 4)
 
     visit user_path(@user)
   end
