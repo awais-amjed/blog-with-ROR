@@ -11,7 +11,7 @@ RSpec.describe Comment, type: :model do
   context 'Call increment counter on a comment' do
     it 'should increment the comments_counter of the Post' do
       previous_counter = post.comments_counter || 0
-      comment.increment_counter
+      comment.update_counter
       expect(post.comments_counter).to eql(previous_counter + 1)
     end
   end

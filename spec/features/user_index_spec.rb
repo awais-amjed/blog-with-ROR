@@ -1,19 +1,12 @@
 require 'rails_helper'
-
-def create_and_activate_user(name)
-  user = User.create!(name:, email: "#{name}@example.com", password: '123456')
-  user.confirm
-  user.photo = "#{name}.jpg"
-  user.save
-  user
-end
+require_relative '../features_helper'
 
 feature 'User Index' do
   background do
     @name1 = 'user1'
-    @user1 = create_and_activate_user(@name1)
+    @user1 = FeaturesHelper.create_and_activate_user(@name1)
     @name2 = 'user2'
-    @user2 = create_and_activate_user(@name2)
+    @user2 = FeaturesHelper.create_and_activate_user(@name2)
 
     visit users_path
   end
